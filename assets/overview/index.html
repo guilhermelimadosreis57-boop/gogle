@@ -1,0 +1,1194 @@
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Google — Organizing the world's information, making it universally accessible and useful.">
+<meta name="theme-color" content="#050506">
+<title>Google — History & Vision</title>
+<link rel="stylesheet" href="assets/noema-ai-studio-74.aura.build/noema.css">
+<link rel="icon" href="assets/noema-ai-studio-74.aura.build/favicon.ico">
+<script>
+/* design-system catalog: inside the catalog iframe the page's own navbar is drawn by the catalog
+   above the frame (so it hides here), the catalog's menu button drives this page's own menu, the
+   pointer over the catalog navbar keeps this page's cursor moving, and the frame reports once the
+   preloader has lifted and the hero intro has played */
+(function () {
+  if (window.parent === window) return;
+  document.documentElement.classList.add('ds-embed');
+  function post(m) { try { window.parent.postMessage(m, '*'); } catch (e) {} }
+  addEventListener('message', function (e) {
+    if (e.source !== window.parent || !e.data) return;
+    var b = document.querySelector('.menu-button');
+    if (e.data.ds === 'menu' && b && (b.getAttribute('aria-expanded') === 'true') !== !!e.data.open) b.click();
+    if (e.data.ds === 'pointer') dispatchEvent(new PointerEvent('pointermove', { clientX: e.data.x, clientY: e.data.y }));
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    var b = document.querySelector('.menu-button');
+    new MutationObserver(function () { post({ ds: 'menu', open: b.getAttribute('aria-expanded') === 'true' }); })
+      .observe(b, { attributes: true, attributeFilter: ['aria-expanded'] });
+    var done = false;
+    function check() {
+      if (done || document.body.classList.contains('loading')) return;
+      done = true; setTimeout(function () { post({ ds: 'ready' }); }, 250);
+    }
+    new MutationObserver(check).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    check();
+  });
+})();
+</script>
+<style>
+html.ds-embed .nav { visibility: hidden; }
+</style>
+<script src="assets/cdn.tailwindcss.com/3.4.17.js"></script>
+</head>
+  <body class="loading">
+    <div class="preloader" aria-label="Loading Google">
+      <div class="preloader__mark">G</div>
+      <div class="preloader__foot">
+        <span>Organizing the world's information<br>Mountain View · 37.4220° N</span>
+        <span class="preloader__percent">00</span>
+      </div>
+    </div>
+
+    <div class="noise" aria-hidden="true"></div>
+    <div class="global-progress" aria-hidden="true"><span></span></div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a class="nav__brand" href="#top" aria-label="Google home" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;"><img src="assets/google/google-g-icon.svg" alt="Google" style="height:24px;width:24px;display:inline-block;vertical-align:middle;"><span style="font-size:1.25rem;font-weight:700;letter-spacing:-0.03em;">Google</span></a>
+      <span class="nav__status">Search is live</span>
+      <button class="menu-button magnetic" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="menu" aria-hidden="true">
+      <div class="menu__image">
+        <img src="assets/google/ecosystem.svg" alt="Google Ecosystem">
+      </div>
+      <div class="menu__panel">
+        <small>Google / Selected chapters</small>
+        <div class="menu__links">
+          <a href="#thesis">Origins <span>01</span></a>
+          <a href="#anatomy">Architecture <span>02</span></a>
+          <a href="#protocol">Mission <span>03</span></a>
+          <a href="#living">Products <span>04</span></a>
+          <a href="#work">Impact <span>07</span></a>
+          <a href="#contact">Connect <span>10</span></a>
+        </div>
+        <div class="menu__meta">
+          <span>Mountain View / Global</span>
+          <span>EST 1998</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero__visual" aria-label="Hover to reveal the human inside the machine">
+          <img class="hero__image hero__image--machine" src="assets/google/hero-machine.jpg" alt="Google intelligent information network">
+          <img class="hero__image hero__image--human" src="assets/google/hero-human.jpg" alt="Human illuminated by Google color spectrum streams">
+          <div class="hero__halo" aria-hidden="true"></div>
+        </div>
+
+        <div class="hero__copy">
+          <span class="eyebrow">Founded 1998 · Mountain View, California</span>
+          <h1>Google <span class="outline">Information</span></h1>
+          <div class="hero__sub">
+            <span class="scroll-cue">Scroll to explore</span>
+            <p>
+              From a garage in Menlo Park to the most-visited
+              website on Earth — organizing the world's information.
+            </p>
+          </div>
+        </div>
+
+        <div class="hero__coordinates" aria-hidden="true">
+          <span>NODE / GG-001</span>
+          <span>STATE / <b data-state="">LATENT</b></span>
+          <span>X <b data-x="">068.0</b> / Y <b data-y="">044.0</b></span>
+        </div>
+        <div class="hero__mode">Hover to shift <b>machine → human</b></div>
+      </section>
+
+      <div class="signal-strip" aria-hidden="true">
+        <div class="signal-strip__track">
+          <span>Search Engine</span><span>Google Maps</span>
+          <span>YouTube</span><span>Android</span>
+          <span>Gmail</span><span>Google Cloud</span>
+          <span>DeepMind</span><span>Waymo</span>
+          <span>Gemini AI</span><span>Chrome</span>
+        </div>
+      </div>
+
+      <section class="manifesto" id="thesis">
+        <span class="manifesto__index">01 / Origins</span>
+        <h2 class="manifesto__statement">
+          <span class="manifesto__line"><span>Born in a garage.</span></span>
+          <span class="manifesto__line"><span>Built for everyone.</span></span>
+          <span class="manifesto__line"><span>A search box that became</span></span>
+          <span class="manifesto__line"><span>the world's front door.</span></span>
+        </h2>
+        <div class="manifesto__foot">
+          <small>
+            Larry Page / Sergey Brin<br>
+            Stanford University, 1996;<br>
+            incorporated September 4, 1998.
+          </small>
+          <p>
+            Larry Page and Sergey Brin met at Stanford University in 1995. Their
+            research project, BackRub, analyzed web link structures to rank pages
+            by relevance. Incorporated in 1998, Google quickly became the world's
+            most trusted search engine.
+          </p>
+        </div>
+        <div class="manifesto__orb" aria-hidden="true"></div>
+      </section>
+
+      <section class="metrics" aria-label="Google key facts">
+        <article class="metric metric__feature">
+          <small>Founded by two Stanford PhD students</small>
+          <strong>The PageRank breakthrough.</strong>
+          <p>Larry Page and Sergey Brin devised an algorithm that ranked pages by the quality and quantity of links pointing to them.</p>
+        </article>
+        <article class="metric">
+          <small>Products launched</small>
+          <strong data-count="12">00</strong>
+          <p>Google Workspace, Maps, YouTube, Android, Chrome, Drive, and more shape daily life globally.</p>
+        </article>
+        <article class="metric">
+          <small>Search market share (%)</small>
+          <strong data-count="91">00</strong>
+          <p>Google processes over 8.5 billion searches per day, maintaining a commanding global share.</p>
+        </article>
+        <article class="metric">
+          <small>Moonshot ventures active</small>
+          <strong data-count="0">00</strong>
+          <p>From Waymo self-driving cars to Project Loon and DeepMind, Alphabet pushes the frontier.</p>
+        </article>
+      </section>
+
+      <section class="anatomy" id="anatomy">
+        <div class="anatomy__pin">
+          <img class="anatomy__image" src="assets/google/anatomy.jpg" alt="Google Data Center Infrastructure and custom TPUs">
+          <div class="anatomy__shade" aria-hidden="true"></div>
+          <div class="anatomy__grid" aria-hidden="true"></div>
+          <div class="anatomy__scan" aria-hidden="true"></div>
+          <div class="anatomy__topline">
+            <span>02 / Architecture</span>
+            <span>The infrastructure beneath the search</span>
+          </div>
+          <h2><span>Scale</span><span>beyond measure.</span></h2>
+          <div class="anatomy__note anatomy__note--one">
+            <b>01 / Index</b>
+            Over 100 billion web pages indexed, updated continuously by Googlebot crawling the web.
+          </div>
+          <div class="anatomy__note anatomy__note--two">
+            <b>02 / Datacenters</b>
+            Google operates 36+ data centers worldwide, built on custom hardware running custom Linux distributions.
+          </div>
+          <div class="anatomy__note anatomy__note--three">
+            <b>03 / AI Core</b>
+            Tensor Processing Units (TPUs) power Search, Translate, Photos, and the Gemini model family.
+          </div>
+        </div>
+      </section>
+
+      <section class="protocol" id="protocol">
+        <div class="protocol__stage">
+          <div class="protocol__header">
+            <span>03 / Mission</span>
+            <span>Three pillars · One purpose</span>
+          </div>
+          <div class="protocol__progress" aria-hidden="true"><span></span></div>
+
+          <article class="chapter">
+            <div class="chapter__copy">
+              <span class="chapter__number">PILLAR_01 / ACCESS</span>
+              <h2>Organize the <i>world's information.</i></h2>
+              <div class="chapter__body">
+                <small>Search / Knowledge</small>
+                <p>
+                  Google's founding mission remains unchanged: organize the world's
+                  information and make it universally accessible and useful to every
+                  person on the planet.
+                </p>
+              </div>
+            </div>
+            <div class="chapter__media">
+              <img src="assets/google/search.svg" alt="Google Search knowledge representation">
+              <span class="chapter__tag">Search · Knowledge Graph</span>
+            </div>
+          </article>
+
+          <article class="chapter">
+            <div class="chapter__copy">
+              <span class="chapter__number">PILLAR_02 / AI</span>
+              <h2>Advance AI <i>responsibly.</i></h2>
+              <div class="chapter__body">
+                <small>Gemini / DeepMind</small>
+                <p>
+                  From AlphaFold cracking protein folding to Gemini powering next-generation
+                  assistants, Google leads the responsible development of artificial intelligence.
+                </p>
+              </div>
+            </div>
+            <div class="chapter__media">
+              <img src="assets/google/gemini.svg" alt="Google Gemini neural network architecture">
+              <span class="chapter__tag">Gemini · AlphaFold</span>
+            </div>
+          </article>
+
+          <article class="chapter">
+            <div class="chapter__copy">
+              <span class="chapter__number">PILLAR_03 / SUSTAINABILITY</span>
+              <h2>Operate <i>carbon-free.</i></h2>
+              <div class="chapter__body">
+                <small>Planet / Future</small>
+                <p>
+                  Google committed to running on 24/7 carbon-free energy across all
+                  its data centers and campuses by 2030—the most ambitious clean
+                  energy goal of any major corporation.
+                </p>
+              </div>
+            </div>
+            <div class="chapter__media">
+              <img src="assets/google/cloud.svg" alt="Google Cloud and green data center network">
+              <span class="chapter__tag">Carbon-free · 2030 goal</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="living" id="living">
+        <div class="living__header">
+          <span>04 / Products</span>
+          <span>The ecosystem, always expanding</span>
+        </div>
+        <div class="living__grid">
+          <div class="living__visual">
+            <img src="assets/google/ecosystem.svg" alt="Google ecosystem expansion">
+            <div class="living__specimen">
+              <span>Product GG-04</span><span>State / Expanding</span>
+            </div>
+            <div class="living__dial">Alphabet<br>ecosystem</div>
+          </div>
+          <div class="living__copy">
+            <article class="living__step is-active" data-living-step="01">
+              <small>01 / Consumer</small>
+              <h2>Search, Gmail, <i>Maps & YouTube.</i></h2>
+              <p>
+                Billions use Google products daily: 15 billion searches, 1.5 billion
+                Gmail users, 2 billion YouTube monthly viewers, and Maps guiding over
+                1 billion trips every day.
+              </p>
+            </article>
+            <article class="living__step" data-living-step="02">
+              <small>02 / Enterprise</small>
+              <h2>Google Cloud <i>& Workspace.</i></h2>
+              <p>
+                Google Cloud serves millions of businesses worldwide, while Google
+                Workspace—Docs, Sheets, Meet—has become the backbone of remote
+                collaboration across every industry.
+              </p>
+            </article>
+            <article class="living__step" data-living-step="03">
+              <small>03 / Moonshots</small>
+              <h2>Waymo, DeepMind, <i>& beyond.</i></h2>
+              <p>
+                Under Alphabet, Google bets on self-driving cars (Waymo), life-sciences
+                breakthroughs (Verily), and the fundamental research that will define
+                the next century of human progress.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="velocity" aria-label="Google philosophy">
+        <div class="velocity__row">10x thinking <i>over</i> incremental —</div>
+        <div class="velocity__row">Information <i>is</i> power —</div>
+        <div class="velocity__note">
+          <small>Don't be evil</small>
+          <p>
+            Google's original informal motto captured an aspiration to build
+            technology that serves people—useful, honest, and open to everyone.
+          </p>
+        </div>
+      </section>
+
+      <section class="text-river" aria-label="Google milestones">
+        <div class="text-river__top">
+          <span>Growth / Timeline</span>
+          <span>1998 · present</span>
+        </div>
+        <div class="text-river__line">Gmail launch <b></b> Gmail launch <b></b></div>
+        <div class="text-river__line">Android open <b></b> Android open <b></b></div>
+        <div class="text-river__line">DeepMind acquired <b></b> DeepMind acquired <b></b></div>
+        <div class="text-river__foot">
+          <small>Alphabet Inc. / GOOGL</small>
+          <p>
+            In 2015 Google restructured under Alphabet—separating its core
+            business from its moonshot bets and creating one of the world's
+            most valuable conglomerates.
+          </p>
+        </div>
+      </section>
+
+      <section class="capabilities" id="capabilities">
+        <div class="capabilities__top">
+          <span>05 / Google Today</span>
+          <span>Hover to explore</span>
+        </div>
+        <div class="capabilities__grid">
+          <div class="capabilities__list">
+            <div class="capability" tabindex="0" data-index="01" data-visual="assets/google/search.svg" data-label="Search / 8.5B queries/day">
+              <small>01</small><strong>Google Search</strong><span>↗</span>
+            </div>
+            <div class="capability" tabindex="0" data-index="02" data-visual="assets/google/gemini.svg" data-label="AI / Gemini Ultra">
+              <small>02</small><strong>Gemini AI</strong><span>↗</span>
+            </div>
+            <div class="capability" tabindex="0" data-index="03" data-visual="assets/google/cloud.svg" data-label="Cloud / 3rd globally">
+              <small>03</small><strong>Google Cloud</strong><span>↗</span>
+            </div>
+            <div class="capability" tabindex="0" data-index="04" data-visual="assets/google/youtube.svg" data-label="Video / 2B users">
+              <small>04</small><strong>YouTube</strong><span>↗</span>
+            </div>
+            <div class="capability" tabindex="0" data-index="05" data-visual="assets/google/android.svg" data-label="Mobile / Android">
+              <small>05</small><strong>Android</strong><span>↗</span>
+            </div>
+            <div class="capability" tabindex="0" data-index="06" data-visual="assets/google/waymo.svg" data-label="Transport / Waymo">
+              <small>06</small><strong>Waymo</strong><span>↗</span>
+            </div>
+          </div>
+          <div class="capabilities__viewer">
+            <img src="assets/google/search.svg" alt="Visual response for selected Google product">
+            <div class="viewer__hud">
+              <div class="viewer__hud-top">
+                <span>Live instrument</span><span>v.26—present</span>
+              </div>
+              <div class="viewer__hud-bottom">
+                <span class="viewer__index">01</span><span>Search / Global</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="field" id="field">
+        <div class="field__pin">
+          <img class="field__image" src="assets/google/willow.svg" alt="Google Quantum AI Willow processor">
+          <div class="field__veil" aria-hidden="true"></div>
+          <div class="field__top">
+            <span>06 / The Future</span>
+            <span>Quantum computing and beyond</span>
+          </div>
+          <h2 class="field__title">
+            <span>Beyond the</span><span>possible.</span>
+          </h2>
+          <div class="field__card">
+            <strong>2030</strong>
+            <p>
+              Google's Willow quantum chip achieved in minutes what would take classical
+              computers longer than the age of the universe to solve—heralding a new era.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="work" id="work">
+        <div class="work__intro">
+          <small>07 / Google's global impact</small>
+          <h2>Milestones that shaped the web.</h2>
+        </div>
+        <div class="work__track">
+          <article class="project">
+            <div class="project__copy">
+              <small>Search Revolution / 1998</small>
+              <h3>PAGERANK</h3>
+              <p>
+                The algorithm that changed the internet — ranking results by
+                link authority, not just keyword frequency.
+              </p>
+            </div>
+            <div class="project__media">
+              <img src="assets/google/pagerank.svg" alt="PageRank — the algorithm that built Google">
+              <span class="project__counter">CASE / 01—03</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__copy">
+              <small>AI breakthrough / 2014–2024</small>
+              <h3>DEEPMIND</h3>
+              <p>
+                Acquired for $500 million in 2014, DeepMind produced AlphaFold,
+                AlphaGo, and Gemini — redefining what AI can achieve.
+              </p>
+            </div>
+            <div class="project__media">
+              <img src="assets/google/deepmind.svg" alt="DeepMind — Google's AI research lab">
+              <span class="project__counter">CASE / 02—03</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__copy">
+              <small>Quantum computing / 2024</small>
+              <h3>WILLOW</h3>
+              <p>
+                Google's Willow quantum chip performed a computation in under five minutes
+                that would take today's fastest supercomputers 10 septillion years.
+              </p>
+            </div>
+            <div class="project__media">
+              <img src="assets/google/willow.svg" alt="Willow — Google's quantum chip">
+              <span class="project__counter">CASE / 03—03</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="collective" id="collective">
+        <div class="collective__pin">
+          <img class="collective__image" src="assets/google/alphabet.svg" alt="Alphabet Inc. constellation of companies">
+          <div class="collective__halo" aria-hidden="true"></div>
+          <div class="collective__top">
+            <span>08 / Alphabet</span>
+            <span>One holding · Many ventures</span>
+          </div>
+          <h2 class="collective__title">
+            <span>Bigger than</span><span>search.</span><span>Bigger than tech.</span>
+          </h2>
+          <div class="collective__footer">
+            <span class="collective__counter">Sync / 00%</span>
+            <p>
+              Alphabet Inc. encompasses Google, YouTube, Waymo, Verily, DeepMind,
+              and X — the moonshot factory — united under the belief that ambitious
+              bets on information and AI will improve life for every person on Earth.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="no-formula" id="no-formula">
+        <div class="no-formula__pin">
+          <div class="no-formula__top">
+            <span>09 / Principles</span>
+            <span>Ten things · Google believes</span>
+          </div>
+          <div class="no-formula__mark" aria-hidden="true">10.</div>
+          <div class="no-formula__statements">
+            <article class="no-formula__statement">
+              <small>Principle 01 / Users First</small>
+              <h2>Focus on the <i>user.</i></h2>
+              <p>
+                All else will follow. Google's first principle: serve the user's
+                needs without compromise, and commercial success follows naturally.
+              </p>
+            </article>
+            <article class="no-formula__statement">
+              <small>Principle 02 / Depth</small>
+              <h2>It's best to <i>do one thing well.</i></h2>
+              <p>
+                Google started with search and mastered it before expanding. Deep
+                expertise in a problem beats shallow coverage of many problems.
+              </p>
+            </article>
+            <article class="no-formula__statement">
+              <small>Principle 03 / Speed</small>
+              <h2>Fast is <i>better than slow.</i></h2>
+              <p>
+                Every millisecond matters. Google optimizes every layer of its stack
+                to minimize latency and keep information flowing without friction.
+              </p>
+            </article>
+            <article class="no-formula__statement">
+              <small>Principle 04 / Democracy</small>
+              <h2>Democracy of <i>the web works.</i></h2>
+              <p>
+                PageRank was built on the insight that the web's link structure is a
+                collective vote — democracy in hypertext form — that surfaces truth.
+              </p>
+            </article>
+          </div>
+          <div class="no-formula__rail" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+      <section class="thesis">
+        <div class="thesis__axis-x" aria-hidden="true"></div>
+        <div class="thesis__axis-y" aria-hidden="true"></div>
+        <div class="thesis__rings" aria-hidden="true"></div>
+        <div class="thesis__copy">
+          <small>Alphabet · NASDAQ: GOOGL · Founded 1998</small>
+          <h2>Organizing information. <i>Advancing</i> human potential.</h2>
+          <p>
+            From ten blue links to a universe of products, from one garage to 36 data centers
+            on six continents — Google's story is just beginning.
+          </p>
+        </div>
+      </section>
+
+      <section class="cta" id="contact">
+        <div class="cta__top">
+          <span>Google LLC</span>
+          <span>Mountain View / Global · 2026</span>
+        </div>
+        <h2>Think <span>bigger.</span></h2>
+        <div class="cta__contact">
+          <a class="magnetic" href="https://about.google" target="_blank" rel="noopener">about.google ↗</a>
+          <div><span>Google Blog</span><span>Google Careers</span><span>Mountain View / Worldwide</span></div>
+        </div>
+        <div class="footer-code" aria-hidden="true">
+          01000111 01001111 01001111 01000111 01001100 01000101<br>
+          SEARCH / AI / CLOUD / 37.4220° N
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/noema-ai-studio-74.aura.build/gsap.min.js"></script>
+    <script src="assets/noema-ai-studio-74.aura.build/ScrollTrigger.min.js"></script>
+    <script>
+      (() => {
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const root = document.documentElement;
+        const body = document.body;
+        const hero = document.querySelector(".hero__visual");
+        const human = document.querySelector(".hero__image--human");
+        const cursor = document.querySelector(".cursor");
+        const ring = document.querySelector(".cursor-ring");
+        const state = document.querySelector("[data-state]");
+        const coordX = document.querySelector("[data-x]");
+        const coordY = document.querySelector("[data-y]");
+
+        let mouseX = innerWidth / 2;
+        let mouseY = innerHeight / 2;
+        let ringX = mouseX;
+        let ringY = mouseY;
+
+        function moveCursor() {
+          ringX += (mouseX - ringX) * 0.14;
+          ringY += (mouseY - ringY) * 0.14;
+          cursor.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+          ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+          requestAnimationFrame(moveCursor);
+        }
+
+        if (!reduceMotion && matchMedia("(pointer:fine)").matches) {
+          moveCursor();
+          addEventListener("pointermove", (event) => {
+            mouseX = event.clientX;
+            mouseY = event.clientY;
+          });
+
+          document.querySelectorAll("a, button, [tabindex], .hero__visual").forEach((node) => {
+            node.addEventListener("mouseenter", () => ring.classList.add("is-active"));
+            node.addEventListener("mouseleave", () => ring.classList.remove("is-active"));
+          });
+
+          hero.addEventListener("pointermove", (event) => {
+            const bounds = hero.getBoundingClientRect();
+            const x = ((event.clientX - bounds.left) / bounds.width) * 100;
+            const y = ((event.clientY - bounds.top) / bounds.height) * 100;
+            root.style.setProperty("--mx", `${x}%`);
+            root.style.setProperty("--my", `${y}%`);
+            human.style.clipPath = `circle(clamp(115px, 12vw, 210px) at ${x}% ${y}%)`;
+            coordX.textContent = x.toFixed(1).padStart(5, "0");
+            coordY.textContent = y.toFixed(1).padStart(5, "0");
+            state.textContent = "REVEALED";
+          });
+
+          hero.addEventListener("pointerleave", () => {
+            human.style.clipPath = "circle(0 at var(--mx) var(--my))";
+            state.textContent = "LATENT";
+          });
+        }
+
+        const menuButton = document.querySelector(".menu-button");
+        const menu = document.querySelector(".menu");
+        let menuOpen = false;
+
+        function toggleMenu(force) {
+          menuOpen = typeof force === "boolean" ? force : !menuOpen;
+          menuButton.setAttribute("aria-expanded", String(menuOpen));
+          menuButton.setAttribute("aria-label", menuOpen ? "Close menu" : "Open menu");
+          menu.setAttribute("aria-hidden", String(!menuOpen));
+          if (window.gsap) {
+            gsap.to(menu, {
+              autoAlpha: menuOpen ? 1 : 0,
+              clipPath: menuOpen ? "inset(0 0 0% 0)" : "inset(0 0 100% 0)",
+              duration: 0.8,
+              ease: "power4.inOut",
+            });
+            gsap.to(".menu__links a", {
+              y: menuOpen ? 0 : 40,
+              opacity: menuOpen ? 1 : 0,
+              duration: 0.6,
+              stagger: 0.06,
+              delay: menuOpen ? 0.3 : 0,
+              ease: "power3.out",
+            });
+            gsap.to(".menu-button span:first-child", {
+              rotate: menuOpen ? 15 : 0,
+              y: menuOpen ? 3 : 0,
+              duration: 0.4,
+            });
+            gsap.to(".menu-button span:last-child", {
+              rotate: menuOpen ? -15 : 0,
+              y: menuOpen ? -4 : 0,
+              width: menuOpen ? "100%" : "68%",
+              duration: 0.4,
+            });
+          }
+        }
+
+        menuButton.addEventListener("click", () => toggleMenu());
+        document.querySelectorAll(".menu a").forEach((link) => {
+          link.addEventListener("click", () => toggleMenu(false));
+        });
+        addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && menuOpen) toggleMenu(false);
+        });
+
+        const viewer = document.querySelector(".capabilities__viewer");
+        const viewerImage = viewer.querySelector("img");
+        const viewerIndex = viewer.querySelector(".viewer__index");
+        const viewerMode = viewer.querySelector(".viewer__hud-bottom span:last-child");
+
+        function selectCapability(item) {
+          viewer.classList.toggle("is-human", Number(item.dataset.index) % 2 === 0);
+          viewerImage.src = item.dataset.visual;
+          viewerIndex.textContent = item.dataset.index;
+          viewerMode.textContent = item.dataset.label;
+          if (window.gsap && !reduceMotion) {
+            gsap.fromTo(viewerImage, { opacity: 0.35, scale: 1.12 }, { opacity: 1, scale: 1.02, duration: 0.75, ease: "power3.out" });
+          }
+        }
+
+        document.querySelectorAll(".capability").forEach((item) => {
+          item.addEventListener("mouseenter", () => selectCapability(item));
+          item.addEventListener("focus", () => selectCapability(item));
+        });
+
+        function initMotion() {
+          if (!window.gsap || !window.ScrollTrigger || reduceMotion) return;
+          gsap.registerPlugin(ScrollTrigger);
+
+          gsap.to(".global-progress span", {
+            scaleX: 1,
+            ease: "none",
+            scrollTrigger: {
+              start: 0,
+              end: () => ScrollTrigger.maxScroll(window),
+              scrub: 0.15,
+            },
+          });
+
+          gsap.set(".preloader__mark", { scale: 0.82, opacity: 0 });
+          const preload = { value: 0 };
+          gsap.to(preload, {
+            value: 100,
+            duration: 1.5,
+            ease: "power3.inOut",
+            onUpdate: () => {
+              document.querySelector(".preloader__percent").textContent = String(Math.round(preload.value)).padStart(2, "0");
+            },
+            onComplete: () => {
+              const tl = gsap.timeline({
+                onComplete: () => {
+                  document.querySelector(".preloader").remove();
+                  body.classList.remove("loading");
+                },
+              });
+              tl.to(".preloader__mark", { scale: 1, opacity: 1, duration: 0.45, ease: "power3.out" })
+                .to(".preloader", { clipPath: "inset(0 0 100% 0)", duration: 0.9, ease: "power4.inOut" }, "+=0.12")
+                .from(".hero h1", { yPercent: 115, opacity: 0, duration: 1.1, ease: "power4.out" }, "-=0.55")
+                .from(".hero .eyebrow, .hero__sub, .hero__coordinates, .hero__mode", { opacity: 0, y: 18, duration: 0.8, stagger: 0.08 }, "-=0.75");
+            },
+          });
+
+          gsap.to(".hero__image", {
+            yPercent: 12,
+            scale: 1.08,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".hero",
+              start: "top top",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+
+          gsap.to(".hero__copy", {
+            yPercent: -22,
+            opacity: 0,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".hero",
+              start: "30% top",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+
+          gsap.from(".manifesto__line span", {
+            yPercent: 115,
+            rotate: 2,
+            duration: 1.1,
+            stagger: 0.12,
+            ease: "power4.out",
+            scrollTrigger: {
+              trigger: ".manifesto__statement",
+              start: "top 78%",
+            },
+          });
+
+          gsap.from(".manifesto__foot", {
+            opacity: 0,
+            x: 80,
+            scrollTrigger: {
+              trigger: ".manifesto__foot",
+              start: "top 85%",
+              end: "bottom 65%",
+              scrub: true,
+            },
+          });
+
+          gsap.to(".manifesto__orb", {
+            rotate: 90,
+            xPercent: -18,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".manifesto",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+
+          document.querySelectorAll("[data-count]").forEach((number) => {
+            const counter = { value: 0 };
+            gsap.to(counter, {
+              value: Number(number.dataset.count),
+              duration: 1.4,
+              ease: "power3.out",
+              scrollTrigger: { trigger: number, start: "top 90%" },
+              onUpdate: () => {
+                number.textContent = String(Math.round(counter.value)).padStart(2, "0");
+              },
+            });
+          });
+
+          const wideScreen = window.matchMedia("(min-width: 768px)").matches;
+
+          if (wideScreen) {
+            const anatomyTl = gsap.timeline({
+              scrollTrigger: {
+                trigger: ".anatomy__pin",
+                start: "top top",
+                end: "+=240%",
+                pin: true,
+                scrub: 1,
+                anticipatePin: 1,
+              },
+            });
+
+            anatomyTl
+              .to(".anatomy__image", {
+                clipPath: "inset(0% 0% round 0rem)",
+                scale: 1.08,
+                filter: "brightness(1) saturate(1)",
+                duration: 1,
+                ease: "none",
+              }, 0)
+              .from(".anatomy h2 span:first-child", {
+                xPercent: -32,
+                opacity: 0,
+                duration: 0.55,
+              }, 0.06)
+              .from(".anatomy h2 span:last-child", {
+                xPercent: 34,
+                opacity: 0,
+                duration: 0.55,
+              }, 0.12)
+              .fromTo(".anatomy__scan", {
+                x: "-42vw",
+              }, {
+                x: "42vw",
+                duration: 1.8,
+                ease: "none",
+              }, 0.18)
+              .to(".anatomy__note--one", { opacity: 1, y: -12, duration: 0.28 }, 0.55)
+              .to(".anatomy__note--two", { opacity: 1, y: -12, duration: 0.28 }, 0.92)
+              .to(".anatomy__note--three", { opacity: 1, y: -12, duration: 0.28 }, 1.28)
+              .to(".anatomy__image", { scale: 1.16, duration: 0.7, ease: "none" }, 1.25);
+          } else {
+            gsap.to(".anatomy__image", {
+              clipPath: "inset(0% round 0rem)",
+              scale: 1.08,
+              ease: "none",
+              scrollTrigger: {
+                trigger: ".anatomy",
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: true,
+              },
+            });
+            gsap.from(".anatomy h2 span", {
+              yPercent: 80,
+              opacity: 0,
+              stagger: 0.12,
+              scrollTrigger: { trigger: ".anatomy h2", start: "top 85%" },
+            });
+          }
+
+          const chapters = gsap.utils.toArray(".chapter");
+          const protocolTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: ".protocol__stage",
+              start: "top top",
+              end: "+=320%",
+              pin: true,
+              scrub: 1,
+              anticipatePin: 1,
+            },
+          });
+
+          protocolTl
+            .to(".protocol__progress span", { height: "33%", duration: 1 }, 0)
+            .to(chapters[0], { opacity: 0, scale: 0.96, duration: 0.35 }, 0.7)
+            .fromTo(chapters[1], { opacity: 0, xPercent: 8 }, { opacity: 1, xPercent: 0, duration: 0.35 }, 0.82)
+            .fromTo(chapters[1].querySelector(".chapter__media"), { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45 }, 0.78)
+            .to(".protocol__progress span", { height: "66%", duration: 1 }, 1)
+            .to(chapters[1], { opacity: 0, scale: 0.96, duration: 0.35 }, 1.7)
+            .fromTo(chapters[2], { opacity: 0, xPercent: 8 }, { opacity: 1, xPercent: 0, duration: 0.35 }, 1.82)
+            .fromTo(chapters[2].querySelector(".chapter__media"), { clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0% 0 0 0)", duration: 0.45 }, 1.78)
+            .to(".protocol__progress span", { height: "100%", duration: 1 }, 2);
+
+          gsap.fromTo(".living__visual img", {
+            scale: 1.08,
+            rotate: -2,
+          }, {
+            scale: 1.18,
+            rotate: 3,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".living",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+
+          gsap.to(".living__dial", {
+            rotate: 270,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".living",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+
+          document.querySelectorAll(".living__step").forEach((step) => {
+            ScrollTrigger.create({
+              trigger: step,
+              start: "top 54%",
+              end: "bottom 46%",
+              onToggle: (self) => {
+                if (self.isActive) {
+                  document.querySelectorAll(".living__step").forEach((item) => item.classList.remove("is-active"));
+                  step.classList.add("is-active");
+                }
+              },
+            });
+
+            gsap.from(step.querySelectorAll("small, h2, p"), {
+              y: 48,
+              opacity: 0,
+              duration: 0.8,
+              stagger: 0.1,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: step,
+                start: "top 78%",
+              },
+            });
+          });
+
+          gsap.to(".velocity__row:first-child", {
+            xPercent: -22,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".velocity",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+
+          gsap.to(".velocity__row:nth-child(2)", {
+            xPercent: 8,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".velocity",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+
+          gsap.to(".text-river__line:nth-child(2)", {
+            xPercent: -24,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".text-river",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+
+          gsap.to(".text-river__line:nth-child(3)", {
+            xPercent: 18,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".text-river",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+
+          gsap.to(".text-river__line:nth-child(4)", {
+            xPercent: -30,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".text-river",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+
+          gsap.from(".text-river__foot > *", {
+            y: 60,
+            opacity: 0,
+            stagger: 0.12,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: ".text-river__foot",
+              start: "top 82%",
+            },
+          });
+
+          gsap.from(".capability", {
+            x: -55,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.09,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: ".capabilities__list",
+              start: "top 78%",
+            },
+          });
+
+          gsap.to(".capabilities__viewer img", {
+            yPercent: 11,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".capabilities__viewer",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+
+          if (wideScreen) {
+            const fieldTl = gsap.timeline({
+              scrollTrigger: {
+                trigger: ".field__pin",
+                start: "top top",
+                end: "+=210%",
+                pin: true,
+                scrub: 1,
+                anticipatePin: 1,
+              },
+            });
+
+            fieldTl
+              .to(".field__image", {
+                clipPath: "inset(0% 0% 0% 0%)",
+                scale: 1.1,
+                duration: 1.2,
+                ease: "none",
+              }, 0)
+              .to(".field__veil", { opacity: 0.18, duration: 0.85 }, 0.25)
+              .to(".field__title span:first-child", { xPercent: -14, duration: 1 }, 0)
+              .to(".field__title span:last-child", { xPercent: 16, duration: 1 }, 0)
+              .from(".field__card", { y: 90, opacity: 0, duration: 0.4 }, 0.75)
+              .to(".field__image", { scale: 1.18, duration: 0.8, ease: "none" }, 1.2);
+          } else {
+            gsap.to(".field__image", {
+              scale: 1.1,
+              clipPath: "inset(0% 0% 0% 0%)",
+              ease: "none",
+              scrollTrigger: {
+                trigger: ".field",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true,
+              },
+            });
+          }
+
+          const track = document.querySelector(".work__track");
+          gsap.to(track, {
+            x: () => -(track.scrollWidth - innerWidth),
+            ease: "none",
+            scrollTrigger: {
+              trigger: track,
+              start: "top top",
+              end: () => `+=${track.scrollWidth - innerWidth}`,
+              pin: true,
+              scrub: 1,
+              invalidateOnRefresh: true,
+            },
+          });
+
+          const sync = { value: 0 };
+          if (wideScreen) {
+            const collectiveTl = gsap.timeline({
+              scrollTrigger: {
+                trigger: ".collective__pin",
+                start: "top top",
+                end: "+=230%",
+                pin: true,
+                scrub: 1,
+                anticipatePin: 1,
+              },
+            });
+
+            collectiveTl
+              .to(".collective__image", {
+                clipPath: "circle(64% at 50% 50%)",
+                filter: "brightness(1) saturate(1)",
+                scale: 1.05,
+                duration: 1.1,
+                ease: "none",
+              }, 0)
+              .to(".collective__halo", { rotate: 120, scale: 1.18, duration: 1.8, ease: "none" }, 0)
+              .to(sync, {
+                value: 100,
+                duration: 1.6,
+                ease: "none",
+                onUpdate: () => {
+                  document.querySelector(".collective__counter").textContent =
+                    `Node sync / ${String(Math.round(sync.value)).padStart(2, "0")}%`;
+                },
+              }, 0)
+              .to(".collective__title span:nth-child(1)", { opacity: 1, y: -8, duration: 0.35 }, 0.35)
+              .to(".collective__title span:nth-child(2)", { opacity: 1, y: -8, duration: 0.35 }, 0.75)
+              .to(".collective__title span:nth-child(3)", { opacity: 1, y: -8, duration: 0.35 }, 1.15)
+              .to(".collective__image", { scale: 1.13, duration: 0.65, ease: "none" }, 1.35);
+          } else {
+            gsap.to(".collective__image", {
+              clipPath: "circle(72% at 50% 50%)",
+              filter: "brightness(1) saturate(1)",
+              ease: "none",
+              scrollTrigger: {
+                trigger: ".collective",
+                start: "top 80%",
+                end: "bottom 25%",
+                scrub: true,
+              },
+            });
+            gsap.to(".collective__title span", {
+              opacity: 1,
+              y: -6,
+              stagger: 0.12,
+              scrollTrigger: { trigger: ".collective__title", start: "top 80%" },
+            });
+          }
+
+          const refusals = gsap.utils.toArray(".no-formula__statement");
+          const refusalTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: ".no-formula__pin",
+              start: "top top",
+              end: "+=300%",
+              pin: true,
+              scrub: 1,
+              anticipatePin: 1,
+            },
+          });
+
+          refusalTl
+            .to(".no-formula__rail span", { width: "25%", duration: 0.6 }, 0)
+            .to(".no-formula__mark", { rotate: -8, scale: 1.03, duration: 0.7 }, 0)
+            .to(refusals[0], { opacity: 0, y: -70, duration: 0.25 }, 0.72)
+            .fromTo(refusals[1], { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 0.3 }, 0.82)
+            .to(".no-formula__rail span", { width: "50%", duration: 0.6 }, 0.75)
+            .to(".no-formula__mark", { rotate: 5, scale: 0.95, duration: 0.7 }, 0.75)
+            .to(refusals[1], { opacity: 0, y: -70, duration: 0.25 }, 1.55)
+            .fromTo(refusals[2], { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 0.3 }, 1.65)
+            .to(".no-formula__rail span", { width: "75%", duration: 0.6 }, 1.55)
+            .to(".no-formula__mark", { rotate: -4, scale: 1.07, duration: 0.7 }, 1.55)
+            .to(refusals[2], { opacity: 0, y: -70, duration: 0.25 }, 2.35)
+            .fromTo(refusals[3], { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 0.3 }, 2.45)
+            .to(".no-formula__rail span", { width: "100%", duration: 0.6 }, 2.35)
+            .to(".no-formula__mark", { rotate: 0, scale: 1, duration: 0.7 }, 2.35);
+
+          gsap.to(".thesis__rings", {
+            scale: 1.32,
+            rotate: 45,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".thesis",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+
+          gsap.from(".thesis__copy h2", {
+            opacity: 0.1,
+            scale: 0.82,
+            filter: "blur(18px)",
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".thesis",
+              start: "top 70%",
+              end: "center 45%",
+              scrub: true,
+            },
+          });
+
+          gsap.from(".cta h2", {
+            yPercent: 60,
+            opacity: 0,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".cta",
+              start: "top bottom",
+              end: "center center",
+              scrub: true,
+            },
+          });
+
+          ScrollTrigger.refresh();
+        }
+
+        if (reduceMotion || !window.gsap) {
+          document.querySelector(".preloader").remove();
+          body.classList.remove("loading");
+        } else {
+          initMotion();
+        }
+      })();
+    </script>
+  
+
+</body></html>

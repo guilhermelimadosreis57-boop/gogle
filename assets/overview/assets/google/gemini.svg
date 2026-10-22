@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="bg2" cx="40%" cy="60%" r="70%">
+      <stop offset="0%" stop-color="#0a0a1a"/>
+      <stop offset="100%" stop-color="#050506"/>
+    </radialGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg2)"/>
+  <!-- Neural network nodes -->
+  <g opacity="0.5" filter="url(#glow2)">
+    <!-- Central node -->
+    <circle cx="600" cy="400" r="28" fill="none" stroke="#4285F4" stroke-width="2"/>
+    <circle cx="600" cy="400" r="8" fill="#4285F4"/>
+    <!-- Surrounding nodes -->
+    <circle cx="400" cy="260" r="16" fill="none" stroke="#EA4335" stroke-width="1.5"/>
+    <circle cx="400" cy="260" r="5" fill="#EA4335"/>
+    <circle cx="800" cy="260" r="14" fill="none" stroke="#FBBC05" stroke-width="1.5"/>
+    <circle cx="800" cy="260" r="4" fill="#FBBC05"/>
+    <circle cx="350" cy="480" r="12" fill="none" stroke="#34A853" stroke-width="1.5"/>
+    <circle cx="350" cy="480" r="4" fill="#34A853"/>
+    <circle cx="850" cy="480" r="18" fill="none" stroke="#4285F4" stroke-width="1.5"/>
+    <circle cx="850" cy="480" r="5" fill="#4285F4"/>
+    <circle cx="600" cy="600" r="14" fill="none" stroke="#EA4335" stroke-width="1.5"/>
+    <circle cx="600" cy="600" r="4" fill="#EA4335"/>
+    <circle cx="480" cy="580" r="10" fill="none" stroke="#FBBC05" stroke-width="1"/>
+    <circle cx="480" cy="580" r="3" fill="#FBBC05"/>
+    <circle cx="720" cy="580" r="10" fill="none" stroke="#34A853" stroke-width="1"/>
+    <circle cx="720" cy="580" r="3" fill="#34A853"/>
+    <!-- Connections -->
+    <line x1="600" y1="400" x2="400" y2="260" stroke="#EA4335" stroke-width="1" opacity="0.6"/>
+    <line x1="600" y1="400" x2="800" y2="260" stroke="#FBBC05" stroke-width="1" opacity="0.6"/>
+    <line x1="600" y1="400" x2="350" y2="480" stroke="#34A853" stroke-width="1" opacity="0.6"/>
+    <line x1="600" y1="400" x2="850" y2="480" stroke="#4285F4" stroke-width="1" opacity="0.6"/>
+    <line x1="600" y1="400" x2="600" y2="600" stroke="#EA4335" stroke-width="1" opacity="0.6"/>
+    <line x1="600" y1="400" x2="480" y2="580" stroke="#FBBC05" stroke-width="0.8" opacity="0.5"/>
+    <line x1="600" y1="400" x2="720" y2="580" stroke="#34A853" stroke-width="0.8" opacity="0.5"/>
+    <!-- Outer nodes -->
+    <circle cx="220" cy="180" r="8" fill="none" stroke="#4285F4" stroke-width="1" opacity="0.5"/>
+    <circle cx="980" cy="200" r="8" fill="none" stroke="#EA4335" stroke-width="1" opacity="0.5"/>
+    <circle cx="180" cy="600" r="6" fill="none" stroke="#34A853" stroke-width="1" opacity="0.5"/>
+    <circle cx="1000" cy="600" r="8" fill="none" stroke="#FBBC05" stroke-width="1" opacity="0.5"/>
+    <line x1="400" y1="260" x2="220" y2="180" stroke="#4285F4" stroke-width="0.5" opacity="0.3"/>
+    <line x1="800" y1="260" x2="980" y2="200" stroke="#EA4335" stroke-width="0.5" opacity="0.3"/>
+    <line x1="350" y1="480" x2="180" y2="600" stroke="#34A853" stroke-width="0.5" opacity="0.3"/>
+    <line x1="850" y1="480" x2="1000" y2="600" stroke="#FBBC05" stroke-width="0.5" opacity="0.3"/>
+  </g>
+  <!-- Gemini label hint -->
+  <text x="600" y="180" font-family="sans-serif" font-size="11" letter-spacing="6" text-anchor="middle" fill="#4285F4" opacity="0.2">GEMINI · NEURAL · AI</text>
+</svg>

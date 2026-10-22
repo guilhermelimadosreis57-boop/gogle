@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#0e0a1f"/>
+      <stop offset="100%" stop-color="#050506"/>
+    </radialGradient>
+    <filter id="glowViolet"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glowCyan"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <!-- AlphaFold Ribbon Helix Curves -->
+  <path d="M 350,600 C 400,500 380,380 440,300 C 500,220 580,240 640,320 C 700,400 680,520 760,560 C 840,600 900,450 920,300" fill="none" stroke="#7928CA" stroke-width="8" opacity="0.65" filter="url(#glowViolet)"/>
+  <path d="M 350,600 C 400,500 380,380 440,300 C 500,220 580,240 640,320 C 700,400 680,520 760,560 C 840,600 900,450 920,300" fill="none" stroke="#00DFD8" stroke-width="3" opacity="0.8" filter="url(#glowCyan)"/>
+  <!-- Secondary beta sheet strand -->
+  <path d="M 280,320 C 360,280 460,450 560,480 C 660,510 740,300 820,240 C 880,190 960,220 1000,340" fill="none" stroke="#4285F4" stroke-width="4" opacity="0.5" stroke-dasharray="12 6"/>
+  <!-- Residue Atoms / Nodes along protein backbone -->
+  <g fill="#00DFD8" filter="url(#glowCyan)">
+    <circle cx="440" cy="300" r="8"/><circle cx="500" cy="235" r="6"/><circle cx="580" cy="245" r="7"/><circle cx="640" cy="320" r="9"/><circle cx="700" cy="420" r="7"/><circle cx="760" cy="560" r="8"/><circle cx="860" cy="540" r="6"/><circle cx="920" cy="300" r="7"/>
+  </g>
+  <g fill="#EA4335" filter="url(#glowViolet)" opacity="0.8">
+    <circle cx="360" cy="280" r="6"/><circle cx="460" cy="450" r="7"/><circle cx="560" cy="480" r="6"/><circle cx="740" cy="300" r="8"/><circle cx="820" cy="240" r="7"/>
+  </g>
+  <!-- Hydrogen bonds (dotted) -->
+  <line x1="440" y1="300" x2="360" y2="280" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="3 3" opacity="0.4"/>
+  <line x1="580" y1="245" x2="560" y2="480" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="3 3" opacity="0.4"/>
+  <line x1="640" y1="320" x2="740" y2="300" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="3 3" opacity="0.4"/>
+  <line x1="760" y1="560" x2="820" y2="240" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="3 3" opacity="0.4"/>
+  <!-- Legend / Labels -->
+  <text x="600" y="710" font-family="'Courier New', monospace" font-size="13" letter-spacing="8" text-anchor="middle" fill="#00DFD8" opacity="0.8">GOOGLE DEEPMIND · ALPHAFOLD 3</text>
+  <text x="600" y="735" font-family="'Courier New', monospace" font-size="10" letter-spacing="4" text-anchor="middle" fill="#7928CA" opacity="0.8">200M+ PROTEIN STRUCTURES PREDICTED · NOBEL PRIZE IN CHEMISTRY 2024</text>
+</svg>

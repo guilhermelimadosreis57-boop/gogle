@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#070d12"/>
+      <stop offset="100%" stop-color="#050506"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <!-- Cloud shapes -->
+  <g opacity="0.18" fill="#4285F4">
+    <ellipse cx="600" cy="340" rx="220" ry="110"/>
+    <ellipse cx="460" cy="360" rx="140" ry="80"/>
+    <ellipse cx="740" cy="360" rx="140" ry="80"/>
+    <ellipse cx="360" cy="390" rx="90" ry="55"/>
+    <ellipse cx="840" cy="395" rx="100" ry="58"/>
+  </g>
+  <!-- Cloud stroke -->
+  <g opacity="0.35" fill="none" stroke="#4285F4" stroke-width="1.5">
+    <ellipse cx="600" cy="340" rx="220" ry="110" filter="url(#glow)"/>
+    <ellipse cx="460" cy="360" rx="140" ry="80"/>
+    <ellipse cx="740" cy="360" rx="140" ry="80"/>
+  </g>
+  <!-- Data lines emanating from cloud -->
+  <g stroke="#4285F4" stroke-width="1" opacity="0.25">
+    <line x1="500" y1="430" x2="350" y2="560"/>
+    <line x1="570" y1="445" x2="480" y2="580"/>
+    <line x1="600" y1="450" x2="600" y2="590"/>
+    <line x1="630" y1="445" x2="720" y2="580"/>
+    <line x1="700" y1="430" x2="850" y2="560"/>
+  </g>
+  <!-- Server dots below -->
+  <g opacity="0.4">
+    <rect x="330" y="560" width="60" height="40" rx="4" fill="none" stroke="#4285F4" stroke-width="1"/>
+    <rect x="460" y="575" width="60" height="40" rx="4" fill="none" stroke="#34A853" stroke-width="1"/>
+    <rect x="570" y="585" width="60" height="40" rx="4" fill="none" stroke="#FBBC05" stroke-width="1"/>
+    <rect x="680" y="575" width="60" height="40" rx="4" fill="none" stroke="#EA4335" stroke-width="1"/>
+    <rect x="810" y="560" width="60" height="40" rx="4" fill="none" stroke="#4285F4" stroke-width="1"/>
+  </g>
+  <text x="600" y="200" font-family="sans-serif" font-size="10" letter-spacing="8" text-anchor="middle" fill="#4285F4" opacity="0.18">GOOGLE CLOUD PLATFORM</text>
+</svg>

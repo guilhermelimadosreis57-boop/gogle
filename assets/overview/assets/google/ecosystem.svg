@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#0b1320"/>
+      <stop offset="100%" stop-color="#050506"/>
+    </radialGradient>
+    <filter id="glowMulti"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <!-- Multi-layered expanding concentric energy rings in Google Colors -->
+  <circle cx="600" cy="400" r="320" fill="none" stroke="#4285F4" stroke-width="1" opacity="0.2" stroke-dasharray="6 10"/>
+  <circle cx="600" cy="400" r="260" fill="none" stroke="#EA4335" stroke-width="1.2" opacity="0.25"/>
+  <circle cx="600" cy="400" r="200" fill="none" stroke="#FBBC05" stroke-width="1.5" opacity="0.3" stroke-dasharray="12 6"/>
+  <circle cx="600" cy="400" r="140" fill="none" stroke="#34A853" stroke-width="1.8" opacity="0.35"/>
+  <circle cx="600" cy="400" r="80" fill="none" stroke="#4285F4" stroke-width="2.5" opacity="0.5" filter="url(#glowMulti)"/>
+  <!-- Center Google G mark -->
+  <g transform="translate(600,400) scale(1.6)" filter="url(#glowMulti)">
+    <path d="M 0 -30 A 30 30 0 0 1 21.2 -21.2 L 14.1 -14.1 A 20 20 0 0 0 0 -20 A 20 20 0 0 0 -20 0 A 20 20 0 0 0 -14.1 14.1 L -21.2 21.2 A 30 30 0 0 1 -30 0 A 30 30 0 0 1 0 -30 Z" fill="#EA4335"/>
+    <path d="M 21.2 -21.2 A 30 30 0 0 1 30 0 L 0 0 L 0 10 L 30 0 A 30 30 0 0 1 21.2 21.2 L 14.1 14.1 A 20 20 0 0 0 20 0 L 0 0 L 0 -10 L 20 0 A 20 20 0 0 0 14.1 -14.1 Z" fill="#4285F4"/>
+    <path d="M -21.2 21.2 A 30 30 0 0 1 0 30 A 30 30 0 0 1 21.2 21.2 L 14.1 14.1 A 20 20 0 0 0 0 20 A 20 20 0 0 0 -14.1 14.1 Z" fill="#34A853"/>
+  </g>
+  <!-- Orbiting pulse particles -->
+  <circle cx="340" cy="400" r="5" fill="#4285F4" filter="url(#glowMulti)"/>
+  <circle cx="600" cy="140" r="5" fill="#EA4335" filter="url(#glowMulti)"/>
+  <circle cx="860" cy="400" r="5" fill="#FBBC05" filter="url(#glowMulti)"/>
+  <circle cx="600" cy="660" r="5" fill="#34A853" filter="url(#glowMulti)"/>
+  <circle cx="416" cy="216" r="4" fill="#4285F4" opacity="0.7"/>
+  <circle cx="784" cy="216" r="4" fill="#EA4335" opacity="0.7"/>
+  <circle cx="784" cy="584" r="4" fill="#FBBC05" opacity="0.7"/>
+  <circle cx="416" cy="584" r="4" fill="#34A853" opacity="0.7"/>
+  <text x="600" y="730" font-family="'Courier New', monospace" font-size="12" letter-spacing="8" text-anchor="middle" fill="#FFFFFF" opacity="0.6">GOOGLE ECOSYSTEM · LIVING SYSTEMS</text>
+</svg>

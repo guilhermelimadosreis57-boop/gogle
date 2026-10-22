@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0d0606"/>
+      <stop offset="100%" stop-color="#050506"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <!-- YouTube play button -->
+  <rect x="375" y="230" width="450" height="280" rx="40" fill="#EA4335" opacity="0.12"/>
+  <rect x="375" y="230" width="450" height="280" rx="40" fill="none" stroke="#EA4335" stroke-width="2" opacity="0.5" filter="url(#glow)"/>
+  <!-- Play triangle -->
+  <polygon points="510,310 510,430 680,370" fill="#EA4335" opacity="0.6" filter="url(#glow)"/>
+  <!-- Waveform lines below -->
+  <g stroke="#EA4335" stroke-width="2" stroke-linecap="round" opacity="0.3">
+    <line x1="200" y1="580" x2="200" y2="540"/>
+    <line x1="230" y1="580" x2="230" y2="510"/>
+    <line x1="260" y1="580" x2="260" y2="530"/>
+    <line x1="290" y1="580" x2="290" y2="500"/>
+    <line x1="320" y1="580" x2="320" y2="520"/>
+    <line x1="350" y1="580" x2="350" y2="545"/>
+    <line x1="380" y1="580" x2="380" y2="515"/>
+    <line x1="410" y1="580" x2="410" y2="490"/>
+    <line x1="440" y1="580" x2="440" y2="540"/>
+    <line x1="760" y1="580" x2="760" y2="540"/>
+    <line x1="790" y1="580" x2="790" y2="505"/>
+    <line x1="820" y1="580" x2="820" y2="530"/>
+    <line x1="850" y1="580" x2="850" y2="515"/>
+    <line x1="880" y1="580" x2="880" y2="545"/>
+    <line x1="910" y1="580" x2="910" y2="495"/>
+    <line x1="940" y1="580" x2="940" y2="525"/>
+    <line x1="970" y1="580" x2="970" y2="540"/>
+    <line x1="1000" y1="580" x2="1000" y2="510"/>
+  </g>
+</svg>

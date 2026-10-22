@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#0a1222"/>
+      <stop offset="100%" stop-color="#050506"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#4285F4"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <!-- Central High-Rank Node (Google PageRank center) -->
+  <circle cx="600" cy="400" r="55" fill="#0d1b33" stroke="#4285F4" stroke-width="3" filter="url(#glow)"/>
+  <text x="600" y="408" font-family="'Courier New', monospace" font-size="20" font-weight="700" fill="#4285F4" text-anchor="middle">PR(A)</text>
+  <!-- Secondary Nodes -->
+  <circle cx="360" cy="240" r="38" fill="#131024" stroke="#EA4335" stroke-width="2"/>
+  <text x="360" y="246" font-family="'Courier New', monospace" font-size="14" fill="#EA4335" text-anchor="middle">PR(B)</text>
+  <circle cx="840" cy="240" r="36" fill="#1b170a" stroke="#FBBC05" stroke-width="2"/>
+  <text x="840" y="246" font-family="'Courier New', monospace" font-size="14" fill="#FBBC05" text-anchor="middle">PR(C)</text>
+  <circle cx="340" cy="560" r="34" fill="#0a1a12" stroke="#34A853" stroke-width="2"/>
+  <text x="340" y="566" font-family="'Courier New', monospace" font-size="14" fill="#34A853" text-anchor="middle">PR(D)</text>
+  <circle cx="860" cy="560" r="32" fill="#0d1b33" stroke="#4285F4" stroke-width="2"/>
+  <text x="860" y="566" font-family="'Courier New', monospace" font-size="14" fill="#4285F4" text-anchor="middle">PR(E)</text>
+  <!-- Outer Satellite nodes -->
+  <circle cx="180" cy="380" r="22" fill="#050506" stroke="#4285F4" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="1020" cy="380" r="22" fill="#050506" stroke="#EA4335" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="600" cy="150" r="24" fill="#050506" stroke="#FBBC05" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="600" cy="650" r="24" fill="#050506" stroke="#34A853" stroke-width="1.5" opacity="0.6"/>
+  <!-- Inbound Directed Edges to Central Node A -->
+  <line x1="395" y1="262" x2="550" y2="368" stroke="#EA4335" stroke-width="2.2" opacity="0.75" marker-end="url(#arrow)"/>
+  <line x1="805" y1="262" x2="648" y2="368" stroke="#FBBC05" stroke-width="2.2" opacity="0.75" marker-end="url(#arrow)"/>
+  <line x1="372" y1="538" x2="552" y2="430" stroke="#34A853" stroke-width="2" opacity="0.7" marker-end="url(#arrow)"/>
+  <line x1="828" y1="538" x2="646" y2="430" stroke="#4285F4" stroke-width="2" opacity="0.7" marker-end="url(#arrow)"/>
+  <line x1="600" y1="174" x2="600" y2="340" stroke="#FBBC05" stroke-width="1.5" opacity="0.5" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+  <line x1="600" y1="626" x2="600" y2="460" stroke="#34A853" stroke-width="1.5" opacity="0.5" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+  <line x1="202" y1="380" x2="320" y2="540" stroke="#4285F4" stroke-width="1" opacity="0.4"/>
+  <line x1="180" y1="358" x2="330" y2="260" stroke="#4285F4" stroke-width="1" opacity="0.4"/>
+  <line x1="998" y1="380" x2="870" y2="260" stroke="#EA4335" stroke-width="1" opacity="0.4"/>
+  <line x1="998" y1="395" x2="880" y2="540" stroke="#EA4335" stroke-width="1" opacity="0.4"/>
+  <!-- Formula subtitle -->
+  <text x="600" y="740" font-family="'Courier New', monospace" font-size="13" letter-spacing="4" text-anchor="middle" fill="#4285F4" opacity="0.8">PR(A) = (1-d) + d × Σ(PR(Ti) / C(Ti))</text>
+  <text x="600" y="765" font-family="'Courier New', monospace" font-size="10" letter-spacing="3" text-anchor="middle" fill="#FFFFFF" opacity="0.4">STANFORD UNIVERSITY · LARRY PAGE &amp; SERGEY BRIN · 1998</text>
+</svg>
