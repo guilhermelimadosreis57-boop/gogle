@@ -38,6 +38,18 @@
 html.ds-embed .nav { visibility: hidden; }
 </style>
 <script src="assets/cdn.tailwindcss.com/3.4.17.js"></script>
+<style>
+  .project__copy h3 {
+    font-size: clamp(2.5rem, 6vw, 5.5rem) !important;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  @media (max-width: 1200px) {
+    .project__copy h3 {
+      font-size: clamp(2rem, 5vw, 4rem) !important;
+    }
+  }
+</style>
 </head>
   <body class="loading">
     <div class="preloader" aria-label="Loading Google">
@@ -325,7 +337,12 @@ html.ds-embed .nav { visibility: hidden; }
         <div class="text-river__line">Android open <b></b> Android open <b></b></div>
         <div class="text-river__line">DeepMind acquired <b></b> DeepMind acquired <b></b></div>
         <div class="text-river__foot">
-          <small>Alphabet Inc. / GOOGL</small>
+          <div class="text-river__col-left" style="display:flex;flex-direction:column;gap:1.5rem;align-items:flex-start;">
+            <small>Alphabet Inc. / GOOGL</small>
+            <div style="width:100%;max-width:440px;border-radius:12px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,0.18);">
+              <img src="assets/google/alphabet-corporate.jpg" alt="Alphabet Inc." style="width:100%;height:auto;display:block;">
+            </div>
+          </div>
           <p>
             In 2015 Google restructured under Alphabet—separating its core
             business from its moonshot bets and creating one of the world's
@@ -341,24 +358,24 @@ html.ds-embed .nav { visibility: hidden; }
         </div>
         <div class="capabilities__grid">
           <div class="capabilities__list">
-            <div class="capability" tabindex="0" data-index="01" data-visual="assets/google/search.svg" data-label="Search / 8.5B queries/day">
-              <small>01</small><strong>Google Search</strong><span>↗</span>
-            </div>
-            <div class="capability" tabindex="0" data-index="02" data-visual="assets/google/gemini.svg" data-label="AI / Gemini Ultra">
-              <small>02</small><strong>Gemini AI</strong><span>↗</span>
-            </div>
-            <div class="capability" tabindex="0" data-index="03" data-visual="assets/google/cloud.svg" data-label="Cloud / 3rd globally">
+            <a class="capability" href="https://www.google.com" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;" tabindex="0" data-index="01" data-visual="assets/google/search.svg" data-label="Search / 8.5B queries/day">
+              <small>01</small><strong>Pesquisa do Google</strong><span>↗</span>
+            </a>
+            <a class="capability" href="https://gemini.google.com" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;" tabindex="0" data-index="02" data-visual="assets/google/gemini.svg" data-label="AI / Gemini Ultra">
+              <small>02</small><strong>IA Gemini</strong><span>↗</span>
+            </a>
+            <a class="capability" href="https://cloud.google.com" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;" tabindex="0" data-index="03" data-visual="assets/google/cloud.svg" data-label="Cloud / 3rd globally">
               <small>03</small><strong>Google Cloud</strong><span>↗</span>
-            </div>
-            <div class="capability" tabindex="0" data-index="04" data-visual="assets/google/youtube.svg" data-label="Video / 2B users">
+            </a>
+            <a class="capability" href="https://www.youtube.com" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;" tabindex="0" data-index="04" data-visual="assets/google/youtube.svg" data-label="Video / 2B users">
               <small>04</small><strong>YouTube</strong><span>↗</span>
-            </div>
-            <div class="capability" tabindex="0" data-index="05" data-visual="assets/google/android.svg" data-label="Mobile / Android">
+            </a>
+            <a class="capability" href="https://www.android.com" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;" tabindex="0" data-index="05" data-visual="assets/google/android.svg" data-label="Mobile / Android">
               <small>05</small><strong>Android</strong><span>↗</span>
-            </div>
-            <div class="capability" tabindex="0" data-index="06" data-visual="assets/google/waymo.svg" data-label="Transport / Waymo">
+            </a>
+            <a class="capability" href="https://waymo.com" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;" tabindex="0" data-index="06" data-visual="assets/google/waymo.svg" data-label="Transport / Waymo">
               <small>06</small><strong>Waymo</strong><span>↗</span>
-            </div>
+            </a>
           </div>
           <div class="capabilities__viewer">
             <img src="assets/google/search.svg" alt="Visual response for selected Google product">
@@ -1064,7 +1081,7 @@ html.ds-embed .nav { visibility: hidden; }
               scrollTrigger: {
                 trigger: ".collective__pin",
                 start: "top top",
-                end: "+=230%",
+                end: "+=400%",
                 pin: true,
                 scrub: 1,
                 anticipatePin: 1,
